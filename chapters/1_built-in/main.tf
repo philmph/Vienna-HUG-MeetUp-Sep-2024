@@ -1,5 +1,5 @@
 locals {
-  # 1_built-in
+  # TODO: 1_built-in - fmt: formatting / alignment
   resource_group_name  = "rg-${var.resource_group_name}"
   storage_account_name = "st${var.storage_account_name}${random_string.this.result}"
 }
@@ -19,13 +19,17 @@ resource "azurerm_resource_group" "this" {
 }
 
 resource "azurerm_storage_account" "this" {
-  # 1_built-in
+  # TODO: 1_built-in - fmt: parameter wrapped in string
   name = local.storage_account_name
-  # 1_built-in
+  # TODO: 1_built-in - validate: non existing reference
   resource_group_name = azurerm_resource_group.this.name
   location            = azurerm_resource_group.this.location
 
   account_kind             = "StorageV2"
   account_tier             = "Standard"
   account_replication_type = "LRS"
+}
+
+output "storage_account_name" {
+  value = azurerm_storage_account.this.name
 }

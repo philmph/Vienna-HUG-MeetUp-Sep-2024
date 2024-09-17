@@ -1,5 +1,4 @@
-# TODO: 2_tflint - variable is snake_case
-variable "subscription_id" {
+variable "subscriptionId" {
   description = "The subscription ID to use for the resources"
   type        = string
 }
@@ -17,9 +16,6 @@ variable "storage_account_name" {
 variable "resource_group_name" {
   default     = "example"
   description = "The name for the Resource Group."
-  # TODO: 2_tflint - variable has a type
-  type = string
 }
 
-# TODO: 2_tflint - unused variable
-# variable "Unused" {}
+variable "Unused" {}
