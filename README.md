@@ -20,7 +20,7 @@ Repository to store the code samples for my Vienna HUG MeetUp talk in September 
 
 `main` will always contain working versions with all applied fixes per chapter.
 
-`README.md` files will exist in the respective folder of `fixme/broken` branch to follow along.
+`README.md` files will exist in the respective chapters (`./chapters/...`) to follow along.
 
 ## License
 
