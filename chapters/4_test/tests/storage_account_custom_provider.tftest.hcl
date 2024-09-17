@@ -22,7 +22,7 @@ variables {
 run "validate_storage_account_name_custom_override" {
   command = apply
 
-  // Uses the overwritten provider configuration from this tftest file
+  // Uses the overwritten provider configuration and variables from this tftest file
 
   assert {
     condition     = length(azurerm_storage_account.this.name) == 24
@@ -45,14 +45,14 @@ run "validate_storage_account_name_custom_override" {
 run "validate_storage_account_name_custom_main" {
   command = apply
 
-  // Uses the alias provider configuration from this tftest file
-  // which is the same as the one in the root module
+  // Uses the alias provider configuration from this tftest file which is the same as the one in the root module
   providers = {
     azurerm = azurerm.main
   }
 
-  // Overwritten for showcase of cross output assertion between run {} blocks
+  // Uses custom variables from this tftest file
   variables {
+    resource_group_name = "customprovider2"
     storage_account_name = "customprovider2"
   }
 
