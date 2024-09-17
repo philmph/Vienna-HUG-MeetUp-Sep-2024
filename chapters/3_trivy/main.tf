@@ -26,6 +26,11 @@ resource "azurerm_storage_account" "this" {
   account_tier             = "Standard"
   account_replication_type = "LRS"
 
-  # 3_trivy
-  min_tls_version = "TLS1_2"
+  # TODO: 3_trivy
+  # min_tls_version = "TLS1_2"
+
+  # Alternatively if you want to accept a risk an inline comment above the resource can filter the findings
+  # trivy:ignore:AVD-AZU-0011
+
+  # Other docs: https://aquasecurity.github.io/trivy/test/docs/configuration/
 }

@@ -25,7 +25,4 @@ resource "azurerm_storage_account" "this" {
   account_kind             = "StorageV2"
   account_tier             = "Standard"
   account_replication_type = "LRS"
-
-  # 3_trivy
-  min_tls_version = "TLS1_2"
 }
