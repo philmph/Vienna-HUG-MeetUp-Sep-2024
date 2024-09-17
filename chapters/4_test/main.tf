@@ -1,5 +1,4 @@
 locals {
-  # 1_built-in
   resource_group_name  = "rg-${var.resource_group_name}"
   storage_account_name = "st${var.storage_account_name}${random_string.this.result}"
 }
@@ -19,9 +18,7 @@ resource "azurerm_resource_group" "this" {
 }
 
 resource "azurerm_storage_account" "this" {
-  # 1_built-in
-  name = local.storage_account_name
-  # 1_built-in
+  name                = local.storage_account_name
   resource_group_name = azurerm_resource_group.this.name
   location            = azurerm_resource_group.this.location
 
@@ -29,6 +26,5 @@ resource "azurerm_storage_account" "this" {
   account_tier             = "Standard"
   account_replication_type = "LRS"
 
-  # 3_trivy
   min_tls_version = "TLS1_2"
 }

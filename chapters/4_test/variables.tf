@@ -1,4 +1,3 @@
-# 2_tflint
 variable "main_subscription_id" {
   description = "The subscription ID to use for the resources"
   type        = string
@@ -24,6 +23,5 @@ variable "tests_subscription_id" {
 variable "resource_group_name" {
   default     = "example"
   description = "The name for the Resource Group."
-  # 2_tflint
-  type = string
+  type        = string
 }

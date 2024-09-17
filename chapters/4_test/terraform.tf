@@ -1,5 +1,4 @@
 terraform {
-  # 2_tflint
   required_version = "~> 1.9"
 
   # Using fixed pins for providers to prevent random occurance during live demo
@@ -9,7 +8,6 @@ terraform {
       version = "4.2.0"
     }
 
-    # 2_tflint
     random = {
       source  = "hashicorp/random"
       version = "3.6.3"
