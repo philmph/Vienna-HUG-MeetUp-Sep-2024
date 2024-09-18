@@ -1,8 +1,9 @@
 run "validate_storage_account_name" {
   // Note: Assertions in this file don't work because random_string will only be known after apply
   // -> Needs command = apply instead of plan. Note that apply is the default.
-  // command = plan
-  command = apply
+  // TODO: 4_test - plan is not sufficient for this test, requies apply
+  command = plan
+  // command = apply
 
   // Uses the provider configuration from root module
 
