@@ -30,8 +30,4 @@ Notes:
 
 - `terraform validate` can be used without backend configuration by using `terraform init -backend=false`
 - `terraform validate` gives fast feedback about the legitimacy of the Terraform configuration
-- `terraform validate` executes `terraform test` in the default sub folder `tests` which can lead to long runs (no more fast feedback)
-
-## Personal Notes
-
-I personally prefer to run `terraform validate` as a fast feedback option with no backend and parameter `-no-tests` in an early CI stage. `terraform test` would be called explicitly.
+- `terraform validate` also validates `*.tftest.hcl` files in the default sub folder `tests`

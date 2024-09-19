@@ -24,7 +24,6 @@ Notes:
 - `terraform test` files can also be written in `.json` which was not checked out by me
 - Variables files (f.e. `terraform.tfvars`) can be provided in the sub folder where test files are running from (f.e. `tests/`). See [documentation](https://developer.hashicorp.com/terraform/language/tests#specify-variables-with-the-command-line-or-definition-files)
 - If you move all `*.tftest.hcl` files into `tests/` they will all run
-- `terraform validate` also runs all test files in the default sub folder `tests`
 - `terraform test` is a combination of unit and integration testing as also outlined in the [documentation](https://developer.hashicorp.com/terraform/language/tests#integration-or-unit-testing)
   - `run {}` blocks with `command = plan` can be considered logical / unit tests
   - `run {}` blocks with `command = apply` can be considered integration tests (provision real infrastructure with dependencies)
