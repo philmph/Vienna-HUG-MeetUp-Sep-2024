@@ -2,6 +2,8 @@
 
 Repository to store the code samples for my Vienna HUG MeetUp talk in September 2024.
 
+I will not be updating this repository after 19.09.2024 anymore. Will be left in the current state as-is.
+
 ## References
 
 | Name                 | Link                                                                                                    |
